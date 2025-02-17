@@ -1,0 +1,46 @@
+.menu {
+  width: 192px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__avatar {
+    width: 46px;
+    height: 46px;
+    aspect-ratio: 1/1;
+    border-radius: 50px;
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__username {
+    margin: 0;
+    color: #092435;
+    //font-family: "Test Tiempos Text";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__role {
+    color: #84919A;
+    //font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
+}
+

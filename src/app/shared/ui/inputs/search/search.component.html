@@ -1,6 +1,6 @@
-<div class="form-control">
-  @if(label()){
-    <label [for]="inputId()">{{label()}}</label>
-  }
-  <input [type]="type()">
+<div class="search-input__container">
+  <span class="search-icon">
+    <app-search-icon></app-search-icon>
+  </span>
+  <input type="search" class="search-input" [placeholder]="placeholder()">
 </div>

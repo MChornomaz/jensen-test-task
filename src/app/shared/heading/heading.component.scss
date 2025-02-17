@@ -2,6 +2,7 @@
 
 .header {
   margin-bottom: 16px;
+
   &__left-section {
   }
 
@@ -44,6 +45,9 @@
   &__content {
     width: 50%;
     max-width: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 }
 

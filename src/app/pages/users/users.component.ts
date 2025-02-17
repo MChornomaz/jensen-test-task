@@ -9,6 +9,8 @@ import {USER_MOCK_DATA} from './mock-data/user-mock-data';
 import {UserComponent} from './user/user.component';
 import {CheckboxGroupComponent, CheckboxOption} from '../../shared/ui/checkbox-group/checkbox-group.component';
 import {UserMenuComponent} from './user-menu/user-menu.component';
+import {TrashIconComponent} from '../../shared/icons/trash-icon/trash-icon.component';
+import {CheckIconComponent} from '../../shared/icons/check-icon/check-icon.component';
 
 @Component({
   selector: 'app-users',
@@ -20,7 +22,9 @@ import {UserMenuComponent} from './user-menu/user-menu.component';
     ButtonBrandComponent,
     UserComponent,
     CheckboxGroupComponent,
-    UserMenuComponent
+    UserMenuComponent,
+    TrashIconComponent,
+    CheckIconComponent
   ],
   templateUrl: './users.component.html',
   styleUrl: './users.component.scss'
