@@ -1,13 +1,15 @@
 import {Component, input} from '@angular/core';
 import {ICourseItem} from './course-item.interface';
 import {DropdownComponent} from '../../../../shared/ui/dropdown/dropdown.component';
-import {IDropdownOptionInterface} from '../../../../shared/ui/dropdown/dropdown-option.interface';
+import {IDropdownOption} from '../../../../shared/ui/dropdown/dropdown-option.interface';
+import {AlertIconComponent} from '../../../../shared/icons/alert-icon/alert-icon.component';
 
 @Component({
   selector: 'app-course-item',
   standalone: true,
   imports: [
-    DropdownComponent
+    DropdownComponent,
+    AlertIconComponent
   ],
   templateUrl: './course-item.component.html',
   styleUrl: './course-item.component.scss'
@@ -15,7 +17,7 @@ import {IDropdownOptionInterface} from '../../../../shared/ui/dropdown/dropdown-
 export class CourseItemComponent {
   courseItem = input<ICourseItem | null>(null);
 
-  options: IDropdownOptionInterface[] = [
+  options: IDropdownOption[] = [
     {
       name: 'Set an Action',
       value: 0
@@ -33,16 +35,4 @@ export class CourseItemComponent {
       value: 3
     }
   ]
-
-  getGradeRows() {
-    const chunkSize = 4;
-    const rows = [];
-    if(this.courseItem() && this.courseItem()?.grades){
-      for (let i = 0; i < this.courseItem()!.grades.length; i += chunkSize) {
-        rows.push(this.courseItem()?.grades.slice(i, i + chunkSize));
-      }
-    }
-    console.log(rows)
-    return rows;
-  }
 }

@@ -1,6 +1,6 @@
 import {Component, computed, input, signal} from '@angular/core';
 import {NgClass} from '@angular/common';
-import {IDropdownOptionInterface} from './dropdown-option.interface';
+import {IDropdownOption} from './dropdown-option.interface';
 
 @Component({
   selector: 'app-dropdown',
@@ -12,18 +12,18 @@ import {IDropdownOptionInterface} from './dropdown-option.interface';
   styleUrl: './dropdown.component.scss'
 })
 export class DropdownComponent {
-  options = input<IDropdownOptionInterface[]>([]);
-  selectedItem = signal<IDropdownOptionInterface | null>(null);
-
+  options = input<IDropdownOption[]>([]);
+  selectedItem = signal<IDropdownOption | null>(null);
+  isDropdownVisible = signal(false);
   currentSelection = computed(() => this.selectedItem());
 
-  selectItem(item: IDropdownOptionInterface): void {
-    this.selectedItem.set(item);
-  }
-
-  isDropdownVisible = signal(false);
 
   toggleDropdown() {
     this.isDropdownVisible.set(!this.isDropdownVisible());
+  }
+
+  selectItem(item: IDropdownOption): void {
+    this.selectedItem.set(item);
+    this.isDropdownVisible.set(false);
   }
 }

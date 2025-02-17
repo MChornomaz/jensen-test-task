@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import {HeadingComponent} from '../../shared/heading/heading.component';
 import {DropdownComponent} from '../../shared/ui/dropdown/dropdown.component';
-import {IDropdownOptionInterface} from '../../shared/ui/dropdown/dropdown-option.interface';
+import {IDropdownOption} from '../../shared/ui/dropdown/dropdown-option.interface';
 import {InputComponent} from '../../shared/ui/inputs/input/input.component';
 import {ICourseItem} from './components/course-item/course-item.interface';
 import {MOCKED_COURSES} from './components/course-item/mock-data/courses-mock-data';
 import {CourseItemComponent} from './components/course-item/course-item.component';
 import {ButtonBrandComponent} from '../../shared/ui/buttons/button-brand/button-brand.component';
+import {TrashIconComponent} from '../../shared/icons/trash-icon/trash-icon.component';
+import {CheckIconComponent} from '../../shared/icons/check-icon/check-icon.component';
 
 @Component({
   selector: 'app-courses',
@@ -16,14 +18,16 @@ import {ButtonBrandComponent} from '../../shared/ui/buttons/button-brand/button-
     DropdownComponent,
     InputComponent,
     CourseItemComponent,
-    ButtonBrandComponent
+    ButtonBrandComponent,
+    TrashIconComponent,
+    CheckIconComponent
   ],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.scss'
 })
 export class CoursesComponent {
 
-  dropdownOptions: IDropdownOptionInterface[] = [
+  dropdownOptions: IDropdownOption[] = [
     {
       name: 'Set an Action',
       value: 0

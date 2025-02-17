@@ -9,6 +9,7 @@ import {Component, input} from '@angular/core';
 })
 export class InputComponent {
   type = input('text');
+  placeholder = input('');
   inputId = input<string | null>();
   label = input<string | null>(null);
 }

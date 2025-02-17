@@ -5,29 +5,27 @@
 
   <div class="course-item__content">
     <div class="row">
-      <div class="col-12 col-md-4">
-        <div class="course-item__details">
-          <h5>{{ courseItem()?.name }}</h5>
-          <p>{{ courseItem()?.description }}</p>
+      <div class="col-12 col-md-3 course-item__course d-flex flex-column">
+        <div class="course-item__details flex-grow-1 p-3">
+          <h5 class="course-item__course-title">
+            <app-alert-icon></app-alert-icon> {{ courseItem()?.name }}
+          </h5>
+          <p class="course-item__course-description">{{ courseItem()?.description }}</p>
         </div>
       </div>
 
-      <div class="col-12 col-md-8">
-        @for(gradeRow of getGradeRows(); track gradeRow){
-          <div>
-            <div class="row">
-              @for(grade of gradeRow; track grade){
-                <div class="col-12 col-sm-6 col-md-3 mb-3">
-                  <div class="grade-card p-3 border">
-                    <h6>{{ grade.name }}</h6>
-                    <p>{{ grade.description }}</p>
-                  </div>
-                </div>
-              }
+      <div class="col-12 col-md-9">
+        <div class="row">
+          @for(grade of courseItem()?.grades; track grade.id){
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+              <div class="course-item__grade-card p-3">
+                <h5 class="course-item__grade-title">{{ grade.name }}</h5>
+                <p class="course-item__grade-description">{{ grade.description }}</p>
+              </div>
             </div>
-          </div>
-        }
+          }
 
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,36 @@
+input{
+  height: 56px;
+  padding: 16px;
+  border-radius: 2px;
+  border: 1px solid #D3D3D3;
+  background: #FFF;
+
+  &::placeholder{
+    color:#84919A;
+
+    //font-family: "Test Tiempos Text";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.input-label{
+  color: #092435;
+
+  //font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+}
+
+.form-group{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

@@ -13,4 +13,5 @@ import {NgClass} from '@angular/common';
 export class ButtonBrandComponent {
   disabled = input(false);
   type = input<'button' | 'submit'>('button')
+  light = input(false);
 }

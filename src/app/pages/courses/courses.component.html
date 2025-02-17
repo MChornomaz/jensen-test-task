@@ -6,7 +6,7 @@
   </div>
   <div class="courses__content">
     <div class="courses__search">
-      <app-input label="Course Name" inputId="search" type="text"></app-input>
+      <app-input placeholder="New Course" label="Course Name" inputId="search" type="text" class="courses__search-input"></app-input>
     </div>
 
     <div class="courses__list">
@@ -15,10 +15,20 @@
       }
     </div>
   </div>
-<div class="courses__buttons">
-  <app-button-brand>Clear All</app-button-brand>
-  <app-button-brand>Apply filter</app-button-brand>
-</div>
+  <div class="courses__buttons-block d-flex justify-content-end">
+    <div class="courses__buttons d-flex w-100">
+      <app-button-brand [light]="true" class="w-50 text-center">
+        Clear All
+        <app-trash-icon></app-trash-icon>
+      </app-button-brand>
+      <app-button-brand class="w-50 text-center">
+        Apply filter
+        <app-check-icon></app-check-icon>
+      </app-button-brand>
+    </div>
+  </div>
+
+
 
 
 </div>

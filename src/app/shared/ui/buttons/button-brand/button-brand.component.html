@@ -1,5 +1,5 @@
-<button class="btn-entity"
-        [ngClass]="['btn-brand']"
+<button class="button-brand"
+        [ngClass]="['btn-brand', light() ? 'secondary' : 'primary']"
         [disabled]="disabled()"
         [type]="type()"
 >

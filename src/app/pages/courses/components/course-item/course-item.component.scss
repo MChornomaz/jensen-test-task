@@ -1,10 +1,90 @@
 .course-item{
   width: 100%;
+  padding: 12px 24px;
+  border-radius: 2px;
+  border: 1px solid  #D3D3D3;
+  background: #FFF;
+
 
   &__heading{
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+  }
+
+  &__content{
+    margin-top: 12px;
+  }
+
+  &__course{
+    display: flex;
+    padding: 12px;
+
+    border-radius: 2px;
+    background: #E5EAEE;
+  }
+
+  &__details{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  &__course-title{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #092435;
+
+    //font-family: "Test Tiempos Fine";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__course-description{
+    color: #092435;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    //font-family: "Test Tiempos Text";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__grade-card{
+    padding: 12px;
+    border-radius: 2px;
+    background:#F6F5F1;
+  }
+
+  &__grade-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  &__grade-title{
+    color: #092435;
+
+    //font-family: "Test Tiempos Fine";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__grade-description{
+    color: #092435;
+
+    //font-family: "Test Tiempos Text";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 }
