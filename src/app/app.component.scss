@@ -1,0 +1,22 @@
+html, body, .page-content {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.page-content {
+  display: flex;
+}
+
+.navbar {
+  width: 312px;
+  background: #092435;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
