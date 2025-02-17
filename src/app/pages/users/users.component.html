@@ -1,1 +1,57 @@
-<p>users works!</p>
+<div class="users__heading">
+<app-search type="seach"></app-search>
+  <div class="users__menu">
+    <app-user-menu></app-user-menu>
+  </div>
+</div>
+<div class="users">
+  <div class="row">
+    <div class="col-12 col-md-9">
+      <div class="users__content">
+        <app-heading>
+          <app-dropdown [options]="dropdownOptions"></app-dropdown>
+        </app-heading>
+
+        <div class="users__list">
+          @for (user of users; track user.id){
+            <app-user [user]="user"></app-user>
+          }
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="col-12 col-md-3">
+      <div class="users__filters">
+
+        <h4>Filters</h4>
+        <div class="users__filter-list">
+          <div class="users__checkbox-group">
+            <h3 class="users__subtitle">Role</h3>
+            <app-checkbox-group [options]="roleOptions"></app-checkbox-group>
+          </div>
+          <div class="users__checkbox-group">
+            <h3 class="users__subtitle">Level</h3>
+            <app-checkbox-group [options]="levelOptions"></app-checkbox-group>
+          </div>
+          <div class="users__checkbox-group">
+            <h3 class="users__subtitle">Direction</h3>
+            <app-checkbox-group [options]="directionOptions"></app-checkbox-group>
+          </div>
+
+        </div>
+        <app-button-brand>Apply Filter</app-button-brand>
+        <app-button-brand>Clear all</app-button-brand>
+      </div>
+    </div>
+  </div>
+  <div class="users__pagination">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+  </div>
+</div>
+
+

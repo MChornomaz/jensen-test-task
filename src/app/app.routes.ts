@@ -9,7 +9,7 @@ export const routes: Routes = [
   },
 
   {
-    path: 'courses/breadcrumbs/users',
+    path: 'courses/breadcrumbs/persons',
     component: UsersComponent
   },
 
