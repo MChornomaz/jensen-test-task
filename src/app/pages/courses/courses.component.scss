@@ -21,12 +21,15 @@
 
   &__title{
     color: #092435;
-
     //font-family: "Test Tiempos Fine";
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+  }
+
+  &__dropdown{
+    width: 232px;
   }
 
   &__content{

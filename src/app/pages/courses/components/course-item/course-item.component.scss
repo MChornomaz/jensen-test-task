@@ -13,6 +13,10 @@
     justify-content: flex-end;
   }
 
+  &__dropdown{
+    width: 240px;
+  }
+
   &__content{
     margin-top: 12px;
   }
@@ -20,7 +24,7 @@
   &__course{
     display: flex;
     padding: 12px;
-
+    max-width: 280px;
     border-radius: 2px;
     background: #E5EAEE;
   }

@@ -19,10 +19,6 @@ export class CourseItemComponent {
 
   options: IDropdownOption[] = [
     {
-      name: 'Set an Action',
-      value: 0
-    },
-    {
       name: 'Option 1',
       value: 1
     },

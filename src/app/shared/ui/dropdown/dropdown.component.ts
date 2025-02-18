@@ -1,4 +1,4 @@
-import {Component, computed, input, signal} from '@angular/core';
+import {Component, computed, input, model, signal} from '@angular/core';
 import {NgClass} from '@angular/common';
 import {IDropdownOption} from './dropdown-option.interface';
 
@@ -13,8 +13,9 @@ import {IDropdownOption} from './dropdown-option.interface';
 })
 export class DropdownComponent {
   options = input<IDropdownOption[]>([]);
-  selectedItem = signal<IDropdownOption | null>(null);
+  selectedItem = model<IDropdownOption | null>(null);
   isDropdownVisible = signal(false);
+  placeholder = input('');
   currentSelection = computed(() => this.selectedItem());
 
 

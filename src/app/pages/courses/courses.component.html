@@ -2,7 +2,9 @@
 <div class="courses">
   <div class="courses__heading">
     <h2 class="courses__title">Course Rubric</h2>
-    <app-dropdown [options]="dropdownOptions"></app-dropdown>
+    <div class="courses__dropdown">
+      <app-dropdown placeholder="Set an Action" [options]="dropdownOptions"></app-dropdown>
+    </div>
   </div>
   <div class="courses__content">
     <div class="courses__search">
